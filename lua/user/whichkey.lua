@@ -96,6 +96,11 @@ local mappings = {
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
+  T = {
+    name = "Tools",
+    p = { "<cmd>tabnew | r !pbpaste | jq \"fromjson\"  <cr>", "Pretty Json" },
+  },
+
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -125,7 +130,7 @@ local mappings = {
     d = {
       "<cmd>Gitsigns diffthis HEAD<cr>",
       "Diff",
-    },
+   },
   },
 
   l = {
