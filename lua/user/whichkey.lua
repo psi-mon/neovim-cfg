@@ -95,6 +95,11 @@ local mappings = {
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+  j = {
+  name = "Jump",
+  j = {'Jump to'},
+    w ={'Word Jump'}
+},
 
   p = {
     name = "Packer",
@@ -103,6 +108,7 @@ local mappings = {
     s = { "<cmd>PackerSync<cr>", "Sync" },
     S = { "<cmd>PackerStatus<cr>", "Status" },
     u = { "<cmd>PackerUpdate<cr>", "Update" },
+    x = {"<cmd> execute normal <Plug>(easymotion-s)","test"},
   },
 
   g = {
