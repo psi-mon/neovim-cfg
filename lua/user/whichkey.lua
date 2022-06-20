@@ -101,6 +101,11 @@ local mappings = {
     w ={'Word Jump'}
 },
 
+  T = {
+    name = "Tools",
+    p = { "<cmd>tabnew | r !pbpaste | jq \"fromjson\"  <cr>", "Pretty Json" },
+  },
+
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -131,7 +136,7 @@ local mappings = {
     d = {
       "<cmd>Gitsigns diffthis HEAD<cr>",
       "Diff",
-    },
+   },
   },
 
   l = {
