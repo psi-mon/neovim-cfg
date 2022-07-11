@@ -25,6 +25,8 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+--vsplit
+keymap("n", "<C-\\>", ":vsplit<CR>", opts)
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -65,7 +67,15 @@ keymap("n","ge","<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",opts)
 keymap("n","gd","<cmd>lua vim.lsp.buf.definition()<CR>",opts)
 --keymap("n","gi","<cmd>lua vim.lsp.buf.signature_help()<CR>",opts)
 
-
+-- Debug Specific Keybinding
+keymap("n","<F5>","<cmd>call vimspector#Continue()<cr>",opts)
+keymap("n","<F4>","<cmd>call vimspector#Launch()<cr>",opts)
+keymap("n","<F3>","<cmd>call vimspector#Stop()<cr>",opts)
+keymap("n","<F2>","<cmd>VimspectorReset<cr>",opts)
+keymap("n","<F9>","<cmd>call vimspector#StepOver()<cr>",opts) --Step Over
+keymap("n","<F10>","<cmd>call vimspector#StepOver()<cr>",opts) --Step Into
+keymap("n","<F6>","<cmd>call vimspector#ToggleBreakpoint()<cr>",opts) --Toggle Breakpoint
+keymap("n","<F8>","<Plug>VimspectorBalloonEval<cr>",term_opts) --Toggle Breakpoint
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)

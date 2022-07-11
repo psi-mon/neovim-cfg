@@ -113,7 +113,6 @@ local mappings = {
     s = { "<cmd>PackerSync<cr>", "Sync" },
     S = { "<cmd>PackerStatus<cr>", "Status" },
     u = { "<cmd>PackerUpdate<cr>", "Update" },
-    x = {"<cmd> execute normal <Plug>(easymotion-s)","test"},
   },
 
   G = {
@@ -182,16 +181,23 @@ local mappings = {
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
 
-  t = {
-    name = "Terminal",
-    n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-    u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-    t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-    p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-    f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-    h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-    v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-  },
+  v = {
+  name = "Vimspector",
+  G = { "<cmd>lua require('user.vimspector').generate_debug_profile()<cr>", "Generate Debug Profile" },
+  I = { "<cmd>VimspectorInstall<cr>", "Install" },
+  U = { "<cmd>VimspectorUpdate<cr>", "Update" },
+  R = { "<cmd>call vimspector#RunToCursor()<cr>", "Run to Cursor" },
+  c = { "<cmd>call vimspector#Continue()<cr>", "Continue" },
+  i = { "<cmd>call vimspector#StepInto()<cr>", "Step Into" },
+  o = { "<cmd>call vimspector#StepOver()<cr>", "Step Over" },
+  s = { "<cmd>call vimspector#Launch()<cr>", "Start" },
+  t = { "<cmd>call vimspector#ToggleBreakpoint()<cr>", "Toggle Breakpoint" },
+  u = { "<cmd>call vimspector#StepOut()<cr>", "Step Out" },
+  S = { "<cmd>call vimspector#Stop()<cr>", "Stop" },
+  r = { "<cmd>call vimspector#Restart()<cr>", "Restart" },
+  x = { "<cmd>VimspectorReset<cr>", "Reset" },
+  H = { "<cmd>lua require('user.vimspector').toggle_human_mode()<cr>", "Toggle HUMAN mode" },
+},
 }
 
 which_key.setup(setup)

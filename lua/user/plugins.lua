@@ -95,6 +95,15 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
+-- vimspector
+use {
+  "puremourning/vimspector",
+  cmd = { "VimspectorInstall", "VimspectorUpdate" },
+  fn = { "vimspector#Launch()", "vimspector#ToggleBreakpoint", "vimspector#Continue" },
+  config = function()
+    require("user.vimspector").setup()
+  end,
+}
   -- Latex setup
   --use{
    -- "~/.config/nvim/latex.nvim",
