@@ -73,9 +73,9 @@ keymap("n","<F4>","<cmd>call vimspector#Launch()<cr>",opts)
 keymap("n","<F3>","<cmd>call vimspector#Stop()<cr>",opts)
 keymap("n","<F2>","<cmd>VimspectorReset<cr>",opts)
 keymap("n","<F9>","<cmd>call vimspector#StepOver()<cr>",opts) --Step Over
-keymap("n","<F10>","<cmd>call vimspector#StepOver()<cr>",opts) --Step Into
+keymap("n","<F10>","<cmd>call vimspector#StepInto()<cr>",opts) --Step Into
 keymap("n","<F6>","<cmd>call vimspector#ToggleBreakpoint()<cr>",opts) --Toggle Breakpoint
-keymap("n","<F8>","<Plug>VimspectorBalloonEval<cr>",term_opts) --Toggle Breakpoint
+keymap("n","<F8>","<Plug>VimspectorBalloonEval<cr>",term_opts)
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
